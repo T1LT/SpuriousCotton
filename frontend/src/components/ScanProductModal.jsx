@@ -95,7 +95,7 @@ export default function ScanProductModal({ open, handleClose }) {
             </>
           ) : (
             <>
-              <div>
+              <div style={{ margin: "5%" }}>
                 {QRError && (
                   <Alert severity="error">
                     <AlertTitle>Invalid QR Code</AlertTitle>
