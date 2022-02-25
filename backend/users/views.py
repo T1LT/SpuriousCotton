@@ -30,7 +30,6 @@ class MyTokenObtainPairView(TokenObtainPairView):
 
 @api_view(["POST"])
 def signup(request):
-    print(request.data)
     user_type = request.data.get("registerAs", None)
     if user_type == "Manufacturer":
         user_type = 1
@@ -60,7 +59,6 @@ def signup(request):
 @api_view(["GET"])
 def getProfile(request):
     user = request.user
-    print(type(user))
     serializer = ProfileSerializer(user)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
